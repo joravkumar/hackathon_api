@@ -8,14 +8,15 @@ const postRoutes = require('./Routes/postRoutes');
 const categoryRoutes = require('./Routes/categoryRoutes');
 // const commentRoutes = require('./Routes/commentRoutes');
 
-mongoose.connect('mongodb://localhost:27017/hackathon', {
+mongoose.connect('mongodb+srv://joravkumar:18199600Jk@@bg-db-cluster-mvrbg.mongodb.net/test?retryWrites=true', {
         useNewUrlParser: true
     })
     .then(_ => {
-        console.log('Connection with Mongodb established successfully');
+        console.log('Connection Established Successfully');
     })
     .catch(err => {
-        console.log('Error While Establishing Connection' + err);
+        console.log(err)
+        console.log('Error While Establishing Connection');
     });
 mongoose.set('useCreateIndex', true);
 
